@@ -1,4 +1,4 @@
-package com.tydic.bcp.common.utils;
+package com.bcp.common.utils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
