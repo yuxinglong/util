@@ -1,6 +1,6 @@
-package com.tydic.bcp.common.utils;
+package com.bcp.common.utils;
 
-import java.util.Iterator;
+import java.util.Iterator
 import java.util.Random;
 import java.util.Set;
 import java.util.regex.Pattern;
