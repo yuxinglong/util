@@ -1,4 +1,4 @@
-package com.tydic.bcp.common.utils;
+
 
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
