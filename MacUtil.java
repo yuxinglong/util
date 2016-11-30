@@ -37,9 +37,6 @@ public class MacUtil {
 	/**
 	 * 生成指定长度的随机字符串（0--9,A--Z,a--Z）
 	 *
-	 *
-	 *
-	 *
 	 * @param length
 	 * @return
 	 */
