@@ -1,0 +1,25 @@
+#!/bin/bash
+#tomcat path eg: /root/tomcat
+deployPath=/usr/local/apache-tomcat-8.5.23
+
+
+if [ ! -d backupWar ]; 
+then     
+    mkdir -p backupWar; 
+fi
+cur_dateTime=`date  +%Y-%m-%d,%H:%M:%s -d '-8 hours'`
+mv $deployPath/webapps/sl-main.war ./backupWar/sl-main.war_$cur_dateTime;
+
+sh $deployPath/bin/shutdown.sh
+echo "tomcat stop..."
+sleep 3
+
+mv sl-main.war $deployPath/webapps
+sh $deployPath/bin/startup.sh
+
+echo "please wait..."
+echo "deploying..."
+sleep 9
+tail -f $deployPath/logs/catalina.out | grep --line-buffer "org.apache.catalina.startup.Catalina.start Server startup"
+
+ 
